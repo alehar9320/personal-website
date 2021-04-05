@@ -2,3 +2,7 @@
 
 /dist
 /coverage
+
+/apps/alhase-web/node_modules
+/apps/alhase-web/public
+/apps/alhase-web/.cache

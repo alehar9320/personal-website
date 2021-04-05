@@ -1,10 +1,91 @@
 {
-  
-  
   "version": 2,
-  
-  "projects": {},
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/gatsby"
+  },
+  "defaultProject": "alhase-web",
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nrwl/gatsby": {
+      "application": {
+        "style": "scss"
+      }
+    }
+  },
+  "projects": {
+    "alhase-web": {
+      "root": "apps/alhase-web",
+      "sourceRoot": "apps/alhase-web/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/gatsby:build",
+          "options": {
+            "outputPath": "apps/alhase-web/public",
+            "uglify": true,
+            "color": true,
+            "profile": false
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/gatsby:server",
+          "options": {
+            "buildTarget": "alhase-web:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "alhase-web:build:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/alhase-web/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/alhase-web"],
+          "options": {
+            "jestConfig": "apps/alhase-web/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "alhase-web-e2e": {
+      "root": "apps/alhase-web-e2e",
+      "sourceRoot": "apps/alhase-web-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/alhase-web-e2e/cypress.json",
+            "tsConfig": "apps/alhase-web-e2e/tsconfig.e2e.json",
+            "devServerTarget": "alhase-web:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "alhase-web:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/alhase-web-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
   }
 }
