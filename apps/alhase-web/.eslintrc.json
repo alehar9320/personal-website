@@ -1,19 +1,17 @@
 {
   "extends": ["plugin:@nrwl/nx/react", "../../.eslintrc.json"],
-  "ignorePatterns": ["!**/*", "public", ".cache"],
+  "ignorePatterns": ["!**/*"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "parserOptions": {
-        "project": ["apps/alhase-web/tsconfig.*?.json"]
+        "project": ["apps/alhase-web/tsconfig(.*)?.json"]
       },
       "rules": {}
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "rules": {
-        "@typescript-eslint/camelcase": "off"
-      }
+      "rules": {}
     },
     {
       "files": ["*.js", "*.jsx"],

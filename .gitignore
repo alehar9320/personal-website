@@ -37,7 +37,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-/apps/alhase-web/node_modules
-/apps/alhase-web/public
-/apps/alhase-web/.cache
