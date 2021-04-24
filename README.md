@@ -1,94 +1,41 @@
+# Official repository for the personal website of Alexander Harenstam
 
+The website is built and maintained by Alexander Harenstam. The site serves first and foremost as as a central informative hub. As a legacy. It also has the purpose to serve as a demonstration of software development skills.
 
-# AlhaseWorkspace
+#### Quick links
 
-This project was generated using [Nx](https://nx.dev).
+[Developer documentation][documentation/developer-documentation.md] |
+[Useful resources](documentation/useful-resources.md) |
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+## Getting started
 
-🔎 **Powerful, Extensible Dev Tools**
+See the [Getting Started Guide]documentation/developer-documentation.md if you're launching this project locally.
 
-## Adding capabilities to your workspace
+## Contributing
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+If you'd like to contribute, feel free to create issues and reach out if you'd like to add changes.
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+## What is being worked on now (2021):
 
-Below are our core plugins:
+- Portfolio section
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+- Fine tuning
 
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
+## About the developer
 
-## Generate an application
+Alexander Harenstam is specialized on front-end development, concept design, and product management. Driven by innovation and change in our age of discontinuity; bringing ideas to life in the form of new products and services.
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+People describe him as a positive and creative thinker. A person that always seeks to spread creative confidence in the organization. As a professional, he is used to dealing with high levels of uncertainty; to fail fast, and learn. He enjoys the thrill of discovery, appreciate the struggle of learning new skills, and get excited when presented with difficult challenges.
 
-> You can use any of the plugins above to generate applications as well.
+Professionally, his aim is to contribute to the advancements of our digital society. He loves to shape and influence digital products and services. Shape and influence them in a way that delight its users.
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+He highly values companies that posses empathy, and puts the customer first. But also, firms that utilize data-driven decision making.
 
-## Generate a library
+Some of the key activities he loves working with is change management, product management, strategy, business transformation, idea generation, prototyping, innovation, front-end development, user experience, and digital design. Primarily, focused on digitalization and the software industry.
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+Alexander has built client frameworks in Angular, high-quality UI component libraries, design systems, designed interactions in both small and large enterprise applications.
 
-> You can also use any of the plugins above to generate libraries as well.
+## Browser and screen reader support
 
-Libraries are shareable across libraries and applications. They can be imported from `@alhase-workspace/mylib`.
-
-## Development server
-
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-
-
-## ☁ Nx Cloud
-
-### Computation Memoization in the Cloud
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+The web application aims to support the most recent two versions of most major browsers.
+Primarily, Chrome (including Android and Edge) and Safari (including iOS). Secondarily, Firefox and IE11.
