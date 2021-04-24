@@ -1,14 +1,9 @@
 {
   "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     ".eslintrc.json": "*"
   },
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "npmScope": "alhase-workspace",
   "tasksRunnerOptions": {
     "default": {
@@ -22,12 +17,8 @@
     }
   },
   "projects": {
-    "alhase-web": {
-      "tags": []
-    },
-    "alhase-web-e2e": {
-      "tags": [],
-      "implicitDependencies": ["alhase-web"]
-    }
+    "alhase-web": { "tags": [] },
+    "alhase-web-e2e": { "tags": [], "implicitDependencies": ["alhase-web"] },
+    "shared-components": { "tags": [] }
   }
 }

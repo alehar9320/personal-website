@@ -1,21 +1,10 @@
 {
   "version": 2,
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
+  "cli": { "defaultCollection": "@nrwl/next" },
   "defaultProject": "alhase-web",
   "generators": {
-    "@nrwl/react": {
-      "application": {
-        "babel": true
-      }
-    },
-    "@nrwl/next": {
-      "application": {
-        "style": "scss",
-        "linter": "eslint"
-      }
-    }
+    "@nrwl/react": { "application": { "babel": true } },
+    "@nrwl/next": { "application": { "style": "scss", "linter": "eslint" } }
   },
   "projects": {
     "alhase-web": {
@@ -30,16 +19,11 @@
             "root": "apps/alhase-web",
             "outputPath": "dist/apps/alhase-web"
           },
-          "configurations": {
-            "production": {}
-          }
+          "configurations": { "production": {} }
         },
         "serve": {
           "executor": "@nrwl/next:server",
-          "options": {
-            "buildTarget": "alhase-web:build",
-            "dev": true
-          },
+          "options": { "buildTarget": "alhase-web:build", "dev": true },
           "configurations": {
             "production": {
               "buildTarget": "alhase-web:build:production",
@@ -49,9 +33,7 @@
         },
         "export": {
           "executor": "@nrwl/next:export",
-          "options": {
-            "buildTarget": "alhase-web:build:production"
-          }
+          "options": { "buildTarget": "alhase-web:build:production" }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
@@ -82,15 +64,34 @@
             "devServerTarget": "alhase-web:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "alhase-web:serve:production"
-            }
+            "production": { "devServerTarget": "alhase-web:serve:production" }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/alhase-web-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "shared-components": {
+      "root": "libs/shared-components",
+      "sourceRoot": "libs/shared-components/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared-components/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared-components"],
+          "options": {
+            "jestConfig": "libs/shared-components/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
