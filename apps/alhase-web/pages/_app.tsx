@@ -1,8 +1,12 @@
 import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ReactComponent as NxLogo } from '../public/nx-logo-white.svg';
 import './styles.css';
+import './styles/main.scss';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+
+config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,10 +15,6 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Welcome to alhase-web!</title>
       </Head>
       <div className="app">
-        <header className="flex">
-          <NxLogo width="75" height="50" />
-          <h1>Welcome to alhase-web!</h1>
-        </header>
         <main>
           <Component {...pageProps} />
         </main>
