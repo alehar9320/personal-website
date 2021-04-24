@@ -1,12 +1,12 @@
 
 
-# NxGatsbyTemplate
+# AlhaseWorkspace
 
 This project was generated using [Nx](https://nx.dev).
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+🔎 **Powerful, Extensible Dev Tools**
 
 ## Adding capabilities to your workspace
 
@@ -45,7 +45,7 @@ Run `nx g @nrwl/react:lib my-lib` to generate a library.
 
 > You can also use any of the plugins above to generate libraries as well.
 
-Libraries are shareable across libraries and applications. They can be imported from `@alhase/mylib`.
+Libraries are shareable across libraries and applications. They can be imported from `@alhase-workspace/mylib`.
 
 ## Development server
 

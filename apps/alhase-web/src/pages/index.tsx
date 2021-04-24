@@ -1,121 +1,105 @@
-import React from 'react'
-import Layout from '../components/layout'
+import React from 'react';
 
-import Header from '../components/Header'
-import Main from '../components/Main'
-import Footer from '../components/Footer'
+import * as styles from './index.module.scss';
 
-class IndexPage extends React.Component {
-    public timeoutId;
-    public wrapperRef;
+import { ReactComponent as Logo } from './logo.svg';
+import star from './star.svg';
 
-    constructor(props: {} | Readonly<{}>) {
-        super(props)
-        this.state = {
-            isArticleVisible: false,
-            timeout: false,
-            articleTimeout: false,
-            article: '',
-            loading: 'is-loading',
-        }
-        this.handleOpenArticle = this.handleOpenArticle.bind(this)
-        this.handleCloseArticle = this.handleCloseArticle.bind(this)
-        this.setWrapperRef = this.setWrapperRef.bind(this)
-        this.handleClickOutside = this.handleClickOutside.bind(this)
-    }
+export function Index() {
+  /*
+   * Replace the elements below with your own.
+   *
+   * Note: The corresponding styles are in the ./alhase-web.scss file.
+   */
+  return (
+    <div className={styles.page}>
+      <header className="flex">
+        <Logo width="75" height="75" />
+        <h1>Welcome to alhase-web!</h1>
+      </header>
+      <main>
+        <h2>Resources &amp; Tools</h2>
+        <p>Thank you for using and showing some ♥ for Nx.</p>
+        <div className="flex github-star-container">
+          <a
+            href="https://github.com/nrwl/nx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {' '}
+            If you like Nx, please give it a star:
+            <div className="github-star-badge">
+              <img src={star} className="material-icons" alt="" />
+              Star
+            </div>
+          </a>
+        </div>
+        <p>Here are some links to help you get started.</p>
+        <ul className="resources">
+          <li className="col-span-2">
+            <a
+              className="resource flex"
+              href="https://connect.nrwl.io/app/courses/nx-workspaces/intro"
+            >
+              Nx video course
+            </a>
+          </li>
+          <li className="col-span-2">
+            <a
+              className="resource flex"
+              href="https://nx.dev/react/getting-started/what-is-nx"
+            >
+              Nx video tutorial
+            </a>
+          </li>
+          <li className="col-span-2">
+            <a
+              className="resource flex"
+              href="https://nx.dev/react/tutorial/01-create-application"
+            >
+              Interactive tutorial
+            </a>
+          </li>
+          <li className="col-span-2">
+            <a className="resource flex" href="https://connect.nrwl.io/">
+              <img
+                height="36"
+                alt="Nrwl Connect"
+                src="https://connect.nrwl.io/assets/img/CONNECT_ColorIcon.png"
+              />
+              <span className="gutter-left">Nrwl Connect</span>
+            </a>
+          </li>
+        </ul>
+        <h2>Next Steps</h2>
+        <p>Here are some things you can do with Nx.</p>
+        <details open>
+          <summary>Add UI library</summary>
+          <pre>{`# Generate UI lib
+nx g @nrwl/react:lib ui
 
-    componentDidMount() {
-        this.timeoutId = setTimeout(() => {
-            this.setState({ loading: '' })
-        }, 100)
-        document.addEventListener('mousedown', this.handleClickOutside)
-    }
+# Add a component
+nx g @nrwl/react:component xyz --project ui`}</pre>
+        </details>
+        <details>
+          <summary>View dependency graph</summary>
+          <pre>{`nx dep-graph`}</pre>
+        </details>
+        <details>
+          <summary>Run affected commands</summary>
+          <pre>{`# see what's been affected by changes
+nx affected:dep-graph
 
-    componentWillUnmount() {
-        if (this.timeoutId) {
-            clearTimeout(this.timeoutId)
-        }
-        document.removeEventListener('mousedown', this.handleClickOutside)
-    }
+# run tests for current changes
+nx affected:test
 
-    setWrapperRef(node: any) {
-        this.wrapperRef = node
-    }
-
-    handleOpenArticle(article: any) {
-        this.setState({
-            isArticleVisible: !this.state.isArticleVisible,
-            article,
-        })
-
-        setTimeout(() => {
-            this.setState({
-                timeout: !this.state.timeout,
-            })
-        }, 325)
-
-        setTimeout(() => {
-            this.setState({
-                articleTimeout: !this.state.articleTimeout,
-            })
-        }, 350)
-    }
-
-    handleCloseArticle() {
-        this.setState({
-            articleTimeout: !this.state.articleTimeout,
-        })
-
-        setTimeout(() => {
-            this.setState({
-                timeout: !this.state.timeout,
-            })
-        }, 325)
-
-        setTimeout(() => {
-            this.setState({
-                isArticleVisible: !this.state.isArticleVisible,
-                article: '',
-            })
-        }, 350)
-    }
-
-    handleClickOutside(event: { target: any }) {
-        if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-            if (this.state.isArticleVisible) {
-                this.handleCloseArticle()
-            }
-        }
-    }
-
-    render() {
-        return (
-            <Layout location={this.props.location}>
-                <div
-                    className={`body ${this.state.loading} ${
-                        this.state.isArticleVisible ? 'is-article-visible' : ''
-                    }`}
-                >
-                    <div id="wrapper">
-                        <Header
-                            onOpenArticle={this.handleOpenArticle}
-                            timeout={this.state.timeout}
-                        />
-                        <Main
-                            isArticleVisible={this.state.isArticleVisible}
-                            timeout={this.state.timeout}
-                            articleTimeout={this.state.articleTimeout}
-                            article={this.state.article}
-                            onCloseArticle={this.handleCloseArticle}
-                            setWrapperRef={this.setWrapperRef}
-                        />
-                        <Footer timeout={this.state.timeout} />
-                    </div>
-                    <div id="bg"></div>
-                </div>
-            </Layout>
-        )
-    }
+# run e2e tests for current changes
+nx affected:e2e
+`}</pre>
+        </details>
+      </main>
+    </div>
+  );
 }
 
-export default IndexPage
+export default Index;
