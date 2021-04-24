@@ -1,11 +1,4 @@
 {
-  "presets": [
-    [
-      "@nrwl/gatsby/babel",
-      {
-        "reactRuntime": "automatic"
-      }
-    ]
-  ],
+  "presets": ["@nrwl/next/babel"],
   "plugins": []
 }
