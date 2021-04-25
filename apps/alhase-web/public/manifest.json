@@ -1,0 +1,30 @@
+{
+    "short_name": "AH",
+    "name": "Alexander Härenstam",
+    "icons": [
+      {
+        "src": "images/adaptive_maskable_icon_512x512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "maskable"
+      },
+      {
+        "src": "images/favico_512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "images/favico_192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "images/favico_16x16.png",
+        "type": "image/png",
+        "sizes": "16x16"
+      }
+    ],
+    "background_color": "#1b1f22",
+    "display": "standalone",
+    "theme_color": "#1b1f22"
+  }
