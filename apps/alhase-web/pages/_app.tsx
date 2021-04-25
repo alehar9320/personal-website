@@ -12,7 +12,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to alhase-web!</title>
+        <title>Alexander Harenstam | Personal Website</title>
       </Head>
       <div className="app">
         <main>

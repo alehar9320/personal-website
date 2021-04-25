@@ -4,6 +4,7 @@ import { Component } from 'react';
 import Header from '../components/header/Header';
 import Main from '../components/main/Main';
 import Footer from '../components/footer/Footer';
+import { ArticleTypes } from '../interfaces/types';
 
 interface IProps {}
 
@@ -18,7 +19,7 @@ interface IState {
 export default class HomePage extends Component<IProps, IState> {
   timeoutId: NodeJS.Timeout;
 
-  constructor(props) {
+  constructor(props: IProps) {
     super(props);
     this.state = {
       isArticleVisible: false,
@@ -43,7 +44,7 @@ export default class HomePage extends Component<IProps, IState> {
     }
   }
 
-  handleOpenArticle(article) {
+  handleOpenArticle(article: ArticleTypes) {
     this.setState({
       isArticleVisible: !this.state.isArticleVisible,
       article,
