@@ -27,7 +27,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
         />
         {/*<!-- Android Chrome tab color -->*/}
         <meta name="theme-color" content="#1b1f22" />
-        <link rel="stylesheet" href="assets/css/main.css" />
+        {/*<link rel="stylesheet" href="assets/css/main.css" />*/}
         {/*<!-- PWA Manifesto -->*/}
         <link rel="manifest" href="/manifest.json" />
         {/*<!-- TODO: icon should not be transparent -->*/}
