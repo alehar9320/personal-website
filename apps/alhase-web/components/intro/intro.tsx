@@ -1,5 +1,4 @@
 import { MainPropTypes } from 'apps/alhase-web/interfaces/types';
-import { useState } from 'react';
 
 export default function Intro({
   article,
@@ -24,27 +23,60 @@ export default function Intro({
       style={{ display: 'none' }}
     >
       <h2 className="major">Intro</h2>
-      <span className="image main">
-        <img src="/images/pic01.jpg" alt="" />
-      </span>
       <p>
-        Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam
-        facilisis ante interdum congue. Integer mollis, nisl amet convallis,
-        porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi
-        nec lacinia. Nam maximus erat id euismod egestas. By the way, check out
-        my <a href="#work">awesome work</a>.
+        Hello there! ...and welcome to my personal website. My name is Alexander
+        Härenstam and I create lovable user experiences - digital products,
+        services, and processes that help make people's lives better.
+        <br />
+        <br />
+        Please do have a look around, and as the website is a living prototype
+        of mine - do let me know if there's anything missing.
       </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus
-        rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh
-        porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc
-        ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit
-        amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla
-        in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique
-        senectus et netus et malesuada fames ac turpis egestas. In non lorem sit
-        amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed
-        vehicula.
+        Currently, the website is being rebuilt from plain HTML5 (javascript,
+        html and css) to better support a modern developer environment. The
+        website is rebuilt using the modern javascript framework React, coupled
+        with the static site generator Next JS and a headless CMS. While doing
+        so, the website will be missing a few features.
+      </p>
+      <p>
+        <strong>Current occupation</strong>
+        <br />
+        Senior Software Engineer,{' '}
+        <a href="https://www.ifsworld.com/" target="_blank">
+          IFS World Operations AB
+        </a>
+        .
+      </p>
+
+      <p>
+        <strong>
+          Education -{' '}
+          <a
+            href="http://www.chalmers.se/sv/utbildning/program-pa-grundniva/Sidor/Informationsteknik.aspx"
+            target="_blank"
+          >
+            Civilingenjör Informationsteknik
+          </a>
+        </strong>
+        <br />
+        2017 -{' '}
+        <a
+          href="http://www.chalmers.se/en/education/programmes/masters-info/Pages/Management-and-Economics-of-Innovation.aspx
+								"
+          target="_blank"
+        >
+          M.sc. Management and Economics of Innovation, Chalmers University of
+          Technology.
+        </a>
+        <br />
+        2015 -{' '}
+        <a
+          href="http://www.chalmers.se/sv/utbildning/program-pa-grundniva/Sidor/Informationsteknik.aspx"
+          target="_blank"
+        >
+          B.sc. Software Engineering, Chalmers University of Technology.
+        </a>
       </p>
       {close}
     </article>
