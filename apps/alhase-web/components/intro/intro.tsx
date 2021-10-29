@@ -42,7 +42,7 @@ export default function Intro({
       <p>
         <strong>Current occupation</strong>
         <br />
-        Senior Software Engineer,{' '}
+        Lead Software Designer,{' '}
         <a href="https://www.ifsworld.com/" target="_blank">
           IFS World Operations AB
         </a>
