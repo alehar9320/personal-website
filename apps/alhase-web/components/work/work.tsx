@@ -28,8 +28,12 @@ export default function Work({
         a specialization on the software industry. Historically, I have carried
         out assignments involving everything from pre-studies, rapid
         prototyping, and business value propositions, to software development,
-        computer help, and website hosting. My areas of expertise stretch across
-        software technology, management, design, and innovation.
+        computer help, and website hosting.{' '}
+      </p>
+
+      <p>
+        My areas of expertise stretch across software technology, management,
+        design, and innovation.
       </p>
 
       <h3>Services</h3>
@@ -37,7 +41,7 @@ export default function Work({
         <div className="service-card">
           <div className="service-card-content-holder">
             <div className="service-card-title">
-              Concept Design & Innovation
+              <h4>Concept Design &amp; Innovation</h4>
             </div>
             <i
               className="icon fa-lightbulb-o service-card-icon fa-4x"
@@ -48,9 +52,12 @@ export default function Work({
             </div>
           </div>
         </div>
+
         <div className="service-card">
           <div className="service-card-content-holder">
-            <div className="service-card-title">Software Development</div>
+            <div className="service-card-title">
+              <h4>Software Development</h4>
+            </div>
             <i
               className="icon fa-code service-card-icon fa-4x"
               aria-hidden="true"
@@ -60,9 +67,12 @@ export default function Work({
             </div>
           </div>
         </div>
+
         <div className="service-card">
           <div className="service-card-content-holder">
-            <div className="service-card-title">Product Management</div>
+            <div className="service-card-title">
+              <h4>Product Management</h4>
+            </div>
             <i
               className="icon fa-line-chart service-card-icon fa-4x"
               aria-hidden="true"
